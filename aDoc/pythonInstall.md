@@ -70,10 +70,10 @@ double click the desktop icon, start VSCode.
       -engine:Engine
       +testDrive()
     }
-    class Vehical {
+    class Vehicle {
       -engine:Engien
     }
-    Vehical <-- Car:is relation 
+    Vehicle <|-- Car:is relation 
     TestDrive <|-- Car : inheritence
     <<interface>> TestDrive
     TestDrive: testDrive()
@@ -84,7 +84,7 @@ double click the desktop icon, start VSCode.
       +runTest()
     }
 
-    Car --* Engine : has relation
+    Vehicle --* Engine : has relation
     ```
     Type | Description
     ---  | ---
