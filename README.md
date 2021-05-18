@@ -7,9 +7,14 @@ In Terminal, change to target workspace folder, and do following command,
 git clone <url copied from github>
 git clone https://github.com/terrenceliu01/python1.git
 ```
-
+* Check GIT status
 ```
-git log --oneline 
+git status
+git log --oneline
+git branch
+```
+* Config GIT user and email
+```
 git config user.name <'username'>
 git config user.email <'email'>
 ```
@@ -23,3 +28,10 @@ git config user.email <'email'>
 * dictionary
 
 ## Operator
+* assignment
+* bitwise
+* comparison
+* identity
+* logical
+* math
+* membership
