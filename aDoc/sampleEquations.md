@@ -78,11 +78,11 @@ $\Delta = b^2 - 4ac$
 where $\Delta>0$ two solution will be real number, if $\Delta<0$, two solution will be complex number.
 
 $$
-\begin{cases}  {2x-5y=8} \\ 3x^2 + 9y=6 \end{cases} \tag{1}
+\begin{cases}  {2x-5y=8} \\ 3x^2 + 9y=6 \end{cases} \tag{3}
 $$
 
-* 几个老头儿去赶集，上街买了一堆梨，一人一个多一个，一人两个少两个。问：几个老头儿几个梨？
-a few man went market bought some pears, if each one get one, there is one leftover; if each one get two, they need two more. How many man they are?, and how many pears they bought?
+* 几个老头儿去赶集，上街看到一堆梨，一人一个多一个，一人两梨少两梨。问：几个老头儿几个梨？
+a few man went market bought some pears, if each one get one, there is one leftover; if each one get two, they need two more. How many man they are?, and how many pears they see?
 
 $$
 \begin{cases}  {x-y=-1} \\ 2x -y =2 \end{cases} \tag{1}
@@ -103,13 +103,23 @@ $x_4$: yonger brother's age at 2016
 $x_5$: the year that father's age is 3 times of elder brother.
 
 $$
-\begin{cases}  {x_1+x_2=78} \\ x_3+x_4 =17 \\ x_1 - 4x_4 = 12 \\ x_2 - 3x_3 = 8  \\ x_1 -3x_3 - 2x_5 = -4032 \end{cases} \tag{1}
+\begin{cases}  
+x_1+x_2=78      \\
+x_3+x_4 =17     \\ 
+x_1 - 4x_4 = 12 \\ 
+x_2 - 3x_3 = 8  \\ 
+x_1 -3x_3 - 2x_5 = -4032 
+\end{cases} \tag{1}
 $$
 
 Solution:
 
 $$
 \begin{cases}
-x_1 = 40\\x_2=38\\x_3=10\\x_4=7\\x_5=2021
+x_1 = 40\\
+x_2=38  \\
+x_3=10  \\
+x_4=7   \\
+x_5=2021
 \end{cases} \tag{2}
 $$

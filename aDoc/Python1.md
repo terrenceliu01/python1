@@ -498,7 +498,7 @@ python -m turtledemo
 ![Built in functions](./images/builtinFunctions.png)
 * define a function
 $$
-\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{arguments}\right) \underbrace {:}_{eol}
+\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
 * type following code in python playground.
 ```py
