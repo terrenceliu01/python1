@@ -4,7 +4,9 @@
 - [Python Class Software Installation](#python-class-software-installation)
   - [Table of Contents](#table-of-contents)
   - [Install VSCode](#install-vscode)
+  - [Install extentions](#install-extentions)
   - [Install Python](#install-python)
+  - [Setup Virture Environment](#setup-virture-environment)
   - [Install Git](#install-git)
   - [PIP install missing module](#pip-install-missing-module)
   - [Image utility (ImageMagick)](#image-utility-imagemagick)
@@ -31,10 +33,10 @@ Search result: Download Visual Studio Code - Mac, Linux, Windows
 
 double click the desktop icon, start VSCode.
 
-* Install extentions
-    * Python; for Running, Debugging, IntelliSense 
-    * Markdown All in One; Markdown preview, Table of contents, Math Equation
-    * Markdown Preview from Matt Bierner; better preview
+## Install extentions
+* Python; for Running, Debugging, IntelliSense 
+* Markdown All in One; Markdown preview, Table of contents, Math Equation
+* Markdown Preview from Matt Bierner; better preview
   ```mermaid
   sequenceDiagram
     participant Alice
@@ -43,36 +45,65 @@ double click the desktop icon, start VSCode.
     loop Healthcheck
       John->>John: Fight against hypochondria
     end
-    Note right of John: Rational thoughts<br/>trivial...
+    Note right of John: Rational thoughts<br/>trival...
     John-->>Alice: Great!
     John->>Bob: How about you?
     Bob-->>John: Jolly good!
   ```
   [Mermaid Diagram](https://mermaid-js.github.io/mermaid/#/)
-    * Markdown to PDF; convert markdown to PDF
-    * Pylance; source code format
-    * Unicode Latex; Insert unicode 
-      Command Palette... > Unicode: Insert Math Symble > 𝛑r²
-      7 ÷ 5 = 1.4, 3
-    * vscode-pdf; PDF preview
-    * PlantUML; generate diagram from code
-    * Jupyter; Python Notebook
-  
-* Setup Virture Environment
-```Windows
-python -m venv env
-./env/bin/activate.bat
-```
+  [Mermaid Diagram Github](https://github.com/mermaid-js/mermaid)
+    - Flow
+    ```mermaid
+    graph TD
+    A[Hard] --> |From sharp corner to round corner| B(Roud)
+    B --> |Make decision|C{Decision?}
+    C --> |Yes| D[If True run this block]
+    C --> |No | E[False run this block]
+    ```
+    - Class
+    ```mermaid
+    classDiagram
+    class Car{
+      -model:str
+      -manufacture:str
+      -year:str
+      -engine:Engine
+      +testDrive()
+    }
+    class Vehical {
+      -engine:Engien
+    }
+    Vehical <-- Car:is relation 
+    TestDrive <|-- Car : inheritence
+    <<interface>> TestDrive
+    TestDrive: testDrive()
 
-```mac
-python -m venv env
-source env/bin/activate
-```
-    - close terminal, open new terminal
-    - Command Pallete ... > Python Select Interpreter
+    class Engine{
+      -model:str
+      -size:str
+      +runTest()
+    }
 
----
-[Table of Contents](#table-of-contents)
+    Car --* Engine : has relation
+    ```
+    Type | Description
+    ---  | ---
+    <\|--| Inheritance
+    *--  | Composition
+    o--  | Aggregation
+    -->  | Association
+    --   | Link 
+
+    [class diagram document](https://github.com/mermaidjs/mermaidjs.github.io/blob/master/classDiagram.md)
+
+* Markdown to PDF; convert markdown to PDF
+* Pylance; source code format
+* Unicode Latex; Insert unicode 
+  Command Palette... > Unicode: Insert Math Symble > area = 𝛑r², 
+  7 ÷ 5 = 1.4, 3 + 5 = 8, 4 x 6 = 24, 7 - 3 = 4
+* vscode-pdf; PDF preview
+* Jupyter; Python Notebook
+
 
 ## Install Python
 We need Python interpretor installed in order to execute Python program.
@@ -119,6 +150,24 @@ Command Palette...>Python: Select Interpreter
 
 ---
 [Table of Contents](#table-of-contents)
+
+## Setup Virture Environment
+For windows OS:
+```Windows
+python -m venv env
+./env/bin/activate.bat
+```
+For MacOS:
+```mac
+python -m venv env
+source env/bin/activate
+```
+    - close terminal, open new terminal
+    - Command Pallete ... > Python Select Interpreter
+
+---
+[Table of Contents](#table-of-contents)
+
 
 ## Install Git
 Git is very powerful source version control software nowaday, we will use it for our python source code version control and homework repository.
@@ -178,14 +227,14 @@ pip freeze
 ```
 
 ## Image utility (ImageMagick)
+ImageMagick utility application can convert from-to different image formats. Very useful for convert serise png file to gif file to create animation image.
+* [Download Website](https://imagemagick.org/script/download.php)
 * Installation file: ImageMagick-x86_64-pc-windows.exe
-
 * installed at C:\Program Files (x86)\ImageMagick-7.0.11-Q8
-
-```
-magick
-
-```
+* Check for success installation
+  ```
+  magick -version
+  ```
 
 * Conver images from png to gif, list of png file to one gif file
 ```
