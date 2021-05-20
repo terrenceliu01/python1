@@ -49,6 +49,9 @@ git tag -a v1.4 -m "my version 1.4"
 * membership
 ## Loop
 * for loop
+```
+for <x> in <iterable variable>:
+```
 $$
 \underbrace {for}_{keyword} x \underbrace {in}_{keyword} \space \space \underbrace {data}_{iterable} \underbrace {:}_{eol}
 $$
