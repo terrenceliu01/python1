@@ -47,3 +47,12 @@ git tag -a v1.4 -m "my version 1.4"
 * logical
 * math
 * membership
+## Loop
+* for loop
+$$
+\underbrace {for}_{keyword} x \underbrace {in}_{keyword} \space \space \underbrace {data}_{iterable} \underbrace {:}_{eol}
+$$
+* while loop
+```  
+  while <condition> :
+```
