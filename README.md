@@ -12,11 +12,23 @@ git clone https://github.com/terrenceliu01/python1.git
 git status
 git log --oneline
 git branch
+git branch <new branch>
 ```
 * Config GIT user and email
 ```
 git config user.name <'username'>
 git config user.email <'email'>
+git init
+```
+* Git revision
+```
+git checkout <revision>
+git checkout <branch>
+git checkout master
+git merge dev
+git tag
+git tag -a <tag number> -m <"tag message">
+git tag -a v1.4 -m "my version 1.4"
 ```
 
 ## Data Type
