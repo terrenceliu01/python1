@@ -8,6 +8,7 @@
   - [Install Python](#install-python)
   - [Setup Virture Environment](#setup-virture-environment)
   - [Install Git](#install-git)
+  - [Git Commands](#git-commands)
   - [PIP install missing module](#pip-install-missing-module)
   - [Image utility (ImageMagick)](#image-utility-imagemagick)
 
@@ -168,7 +169,6 @@ source env/bin/activate
 ---
 [Table of Contents](#table-of-contents)
 
-
 ## Install Git
 Git is very powerful source version control software nowaday, we will use it for our python source code version control and homework repository.
 
@@ -205,6 +205,37 @@ git --version
 ```
 ---
 [Table of Contents](#table-of-contents)
+
+## Git Commands
+* Clone source code from github.
+In Terminal, change to target workspace folder, and do following command,
+```
+git clone <url copied from github>
+git clone https://github.com/terrenceliu01/python1.git
+```
+* Check GIT status
+```
+git status
+git log --oneline
+git branch
+git branch <new branch>
+```
+* Config GIT user and email
+```
+git config user.name <'username'>
+git config user.email <'email'>
+git init
+```
+* Git revision
+```
+git checkout <revision>
+git checkout <branch>
+git checkout master
+git merge dev
+git tag
+git tag -a <tag number> -m <"tag message">
+git tag -a v1.4 -m "my version 1.4"
+```
 
 ## PIP install missing module
 
