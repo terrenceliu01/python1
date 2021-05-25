@@ -1,0 +1,1 @@
+Write python program, find all prime number between 40 50.
