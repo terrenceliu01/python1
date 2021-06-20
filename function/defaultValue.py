@@ -8,9 +8,9 @@ f(x=19)
 # print default value of x
 f()
 
-def f1(a, l=[]):
-    l.append(a)
-    return l
+def f1(a, l1=[]):
+    l1.append(a)
+    return l1
 
 print(f1(1))
 print(f1(4))
