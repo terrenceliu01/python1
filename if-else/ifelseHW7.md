@@ -6,3 +6,4 @@ Expected Output:
 
 60°C is 140 in Fahrenheit
 45°F is 7 in Celsius
+

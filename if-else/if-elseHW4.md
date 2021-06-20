@@ -11,3 +11,13 @@ input | output
 7     |Your number is odd.
 2.3   |The number must to be an integer. 
 hello |The number must to be an integer. 
+
+result = input("please enter an integer number: ")
+
+if type(result) == int:
+    if result%2==0:
+        print("Your number is even")
+    else:
+        print("Your number is odd")
+else:
+    print("The number must be an integer")

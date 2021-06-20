@@ -1,0 +1,5 @@
+tuple1 = (4,8,3)
+print(tuple1[0])
+print(tuple1[1])
+print(tuple1[2])
+print(tuple1[0] + tuple1[1] + tuple1[2])
