@@ -4,8 +4,8 @@
 1. print odd number within 1 to 10 by using for loop and if condition;
 
 Expected output:
-even number:
 ```
+even number:
 2
 4
 6
@@ -13,8 +13,8 @@ even number:
 10
 ```
 
-odd number:
 ```
+odd number:
 1
 3
 5
