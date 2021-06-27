@@ -9,6 +9,7 @@
 - [Data Type](#data-type)
 - [Operator](#operator)
 - [Execution Control](#execution-control)
+- [function](#function)
 - [Loop](#loop)
 
 
@@ -34,29 +35,30 @@ print(f"The circle area with radius={r} is {a:.2f}")
 [Python Keywords](https://realpython.com/python-keywords/#:~:text=%20Python%20Keywords%20and%20Their%20Usage%20%201,are%20used%20for%20control%20flow%3A%20if%2C...%20More%20)
 4. Avoid using existing function name as your variable name.
 otherwise, your python builtins functions no longer works the way you expected.
-
+![](images/chineseMedicine.jpg)
+![](images/memory.gif)
 ## Data Type
-* [Numbers](../src/number.py)
+* [Numbers](../src/languageBasics/number.py)
     - int
     - float
     - str
-* [String](../src/string.py)
+* [String](../src/languageBasics/string.py)
     - iterale
     - slicing
     - +, * operators
     - built in functions (isdigit, isalnum, title, ...)
-* [Tuple](../src/tuple.py)
+* [Tuple](../src/languageBasics/tuple.py)
     - iterable
     - immutable
     - slicing
     - +, * operator
-* [List](../src/list.py)
+* [List](../src/languageBasics/list.py)
     - iterable
     - mutable
     - slicing
     - +, * operator
     - built in functions (append, insert, remove, pop, ...)
-* [Set](../src/set.py)
+* [Set](../src/languageBasics/set.py)
     - iterable
     - mutable
     - built in functions(add, )
@@ -112,4 +114,6 @@ class B,B1,B2 html
 class E,E1 end1
 ```
 
+## function
+[]
 ## Loop
