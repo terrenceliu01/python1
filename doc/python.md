@@ -9,8 +9,8 @@
 - [Data Type](#data-type)
 - [Operator](#operator)
 - [Execution Control](#execution-control)
-- [function](#function)
 - [Loop](#loop)
+- [function](#function)
 
 
 ## My First python program
@@ -23,7 +23,7 @@ print(f"The circle area with radius={r} is {a:.2f}")
 ```
 
 ## comment (single line, multiple line)
-[comment.py](../src/comment.py)
+[comment.py](../src/languageBasics/comment.py)
 * single line comment
 * multiple line comment
 
@@ -37,11 +37,14 @@ print(f"The circle area with radius={r} is {a:.2f}")
 otherwise, your python builtins functions no longer works the way you expected.
 ![](images/chineseMedicine.jpg)
 ![](images/memory.gif)
+
+![](images/LanguageBasics.svg)
+
 ## Data Type
 * [Numbers](../src/languageBasics/number.py)
     - int
     - float
-    - str
+    - complex
 * [String](../src/languageBasics/string.py)
     - iterale
     - slicing
@@ -62,6 +65,10 @@ otherwise, your python builtins functions no longer works the way you expected.
     - iterable
     - mutable
     - built in functions(add, )
+
+* [Dict](../src/languageBasics/dictionary.py)
+    - iterable: only iterate key
+
 
 ## Operator 
 
@@ -113,7 +120,30 @@ class A,A1 start
 class B,B1,B2 html
 class E,E1 end1
 ```
+## Loop
+[simple for loop](../src/languageBasics/loop/for1.py)
+
+```mermaid
+graph TB
+B([Python Program])
+C[Python function]
+D[Python class]
+
+B --> C
+B --> D
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+classDef js fill:yellow,stroke:#DE9E1F,stroke-width:2px;
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px;
+class START start
+class C,D html
+class END end1
+```
 
 ## function
-[]
-## Loop
+$$
+\underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
+$$
+
+[]()
