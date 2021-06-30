@@ -1,8 +1,13 @@
-def trapArea(upper, down, height):
-    upper = input("Enter upper side: ")
-    down = input("Enter down side: ")
-    height = input("Enter height: ")
+def trapezoidArea(upper, down, height):
+    """
+    return ....
+    """
     return (upper+down)*height/2
 
-a = trapArea(upper, down, height)
-print()
+if __name__ == '__main__':
+    upper = float(input("Enter upper side: ")) # front tier
+    down = float(input("Enter down side: "))
+    height = float(input("Enter height: "))
+    # validate data here
+    a = trapezoidArea(upper, down, height) # middle tier
+    print(a)

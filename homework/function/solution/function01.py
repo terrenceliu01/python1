@@ -1,5 +1,5 @@
 def triangleArea(base,height):
-    """py
+    """
     Return triangle area with given base and height
     """
     return base*height/2
