@@ -10,7 +10,7 @@ for given code below:
 b = 10
 h = 20
 area = triangleArea(b,h)
-```
+```8
 
 Expected result:
 
