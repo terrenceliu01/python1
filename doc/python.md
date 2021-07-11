@@ -64,13 +64,44 @@ otherwise, your python builtins functions no longer works the way you expected.
 * [Set](../src/languageBasics/set.py)
     - iterable
     - mutable
+    - &, |, ... operator
     - built in functions(add, )
 
 * [Dict](../src/languageBasics/dictionary.py)
     - iterable: only iterate key
+    - built in functions (items, keys,pop)
 
 
 ## Operator 
+* [operator](../src/languageBasics/operator.py)
+* [arithmatic](../src/languageBasics/operator/arithmatic.py)
+* [assignment](../src/languageBasics/operator/assignment.py)
+* [comparison](../src/languageBasics/operator/comparison.py)
+* [identity](../src/languageBasics/operator/identity.py)
+* [logical](../src/languageBasics/operator/logical.py)
+* [membership](../src/languageBasics/operator/membership.py)
+* [others](../src/languageBasics/operator/others.py)
+* [ternary](../src/languageBasics/operator/ternary.py)
+* [bitwise](../src/languageBasics/operator/bitwise.py)
+* 
+* Arithmatic Operator: +; -; *; /: %; **;//(floor divisor)
+    [arithmatic.py](../src/arithmatic.py)
+* Assignment Operators: =; +=; -=; *=; /=; %=; **=; //=
+    [assignment.py](../src/assignment.py)
+* Comparison Operators: ==, !=, <, >, <=, >=
+    [comparison.py](../src/comparison.py)
+* Logical Operator: and, or, not
+    [logical.py](../src/logical.py)
+* Membership Operator: in, not in
+    [membership.py](../src/membership.py)
+* Identity Operator: is, is not
+    [identity.py](../src/identity.py)
+* Ternary operator: if-else, and-or
+    [ternary.py](../src/ternary.py)
+* Multiple times operator: **
+    [others.py](../src/others.py)
+* Bitwise Operator: &, |, ^, <<, >>
+    [bitwise.py](../src/bitwise.py)
 
 
 ## Execution Control
@@ -101,10 +132,10 @@ B--False-->D-->E
 A1((start))
 B1{if <condition>:}
 B2{elif <condition>:}
-C1[if code block]
-D1[elif code block]
+C1[if code block<br>line-4,5]
+D1[elif code block<br>line-7]
 E1[end]
-F1[else code block]
+F1[else code block<br>line-9]
 
 A1-->B1
 B1--True-->C1-->E1
@@ -120,7 +151,27 @@ class A,A1 start
 class B,B1,B2 html
 class E,E1 end1
 ```
+* [if-else2.py](../src/../content/if-else/if-else1.py)
+
 ## Loop
+* For loop
+  ![](images/Loop.svg)
+
+* [for/while loop](../src/languageBasics/loop/for2.py)
+
+* While loop
+    ![](images/while.svg)
+
+[while loop](../src/languageBasics/loop/while.py)
+* Python does NOT support do-while loop, but you can simulate do-while.
+    ![](images/DoWhile.svg)
+```
+while loop has 3 part:
+1. initialize variable, a=0
+2. variable condition, a<10
+3. adjust variable, a +=1
+```
+
 [simple for loop](../src/languageBasics/loop/for1.py)
 
 ```mermaid
@@ -142,6 +193,17 @@ class END end1
 ```
 
 ## function
+    - def, Python reserved keyword
+    - function name, anything you want, but need follow the naming rules
+    - (), must have open/close parenthesis pair, no matter it has arguments or not
+    - arguments, positional or keyword arguments separated by comma ,
+    - :, must end with colon
+    - the function body must indent
+    - ❗️⚡️function can be overridden
+    - 😄return more than one value
+    - 💡single response
+    - call a function by function name and (), and arguments if there is any
+
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
@@ -149,5 +211,11 @@ $$
 * [Function Basics](../src/function/function.py)
 ⚡️never override built-in functions and your previous defined function if you still need them.
 * [Function in function](../src/function/functionInFunction.py)
-  ❓What is OOP?
-
+* [Return function from function](../src/function/returnFunction.py)
+* [pass function as argument](../src/function/passFunction2function.py)
+❓What is OOP? What are differences between Functional Programming and OOP
+✔️4 Features of OOP
+  1. Abstraction:class is a abstraction of object in real world to python program object type.（实体模拟）
+  2. Inheritance: a class can inherit from multiple other class to increase code reusability.（共性继承）
+  3. Polymorphism:same function behavior differently by different object type.（异类同功）
+  4. Encapsulation：avoid data or function being called outside the class unintentionally（自我保护)
