@@ -11,6 +11,7 @@
 - [Execution Control](#execution-control)
 - [Loop](#loop)
 - [function](#function)
+- [Unit test](#unit-test)
 
 
 ## My First python program
@@ -48,7 +49,7 @@ otherwise, your python builtins functions no longer works the way you expected.
 * [String](../src/languageBasics/string.py)
     - iterale
     - slicing
-    - +, * operators
+    - +, *, <, > operators
     - built in functions (isdigit, isalnum, title, ...)
 * [Tuple](../src/languageBasics/tuple.py)
     - iterable
@@ -219,3 +220,64 @@ $$
   2. Inheritance: a class can inherit from multiple other class to increase code reusability.（共性继承）
   3. Polymorphism:same function behavior differently by different object type.（异类同功）
   4. Encapsulation：avoid data or function being called outside the class unintentionally（自我保护)
+* [raiseError.py](../src/function/raiseError.py)
+
+```mermaid
+graph TB
+A[Try]
+B[No error block]
+C[Raise Error]
+D[Continue Block]
+END[end]
+F[except block]
+G[Wait for <br>service request]
+
+A-->B-->C-->F--blows up-->END
+B-->D-->G
+
+classDef html fill:#12DBE2,stroke:#12DBE2,stroke-width:4px,color:#E21912;
+classDef js fill:yellow,stroke:#DE9E1F,stroke-width:2px;
+classDef start fill:#299F30,stroke:#0B7111,stroke-width:2px;
+classDef if fill:#EFAE58,stroke:#EFAE58,color:#5899EF;
+classDef end1 fill:#F46661,stroke:#F12D26,stroke-width:2px;
+
+class START start
+class B,C,D html
+class G js
+class IF if
+class END end1
+```
+
+```mermaid
+graph LR
+A([Software Project])
+D[User Interface]
+E[Business Logic]
+F[Database]
+G["No SQL(MongoDB)"]
+H["SQLite RelastionalDB"]
+I[Window Based]
+J[Web Based]
+K[ReactJS]
+L[Angular]
+M[DJango]
+N[Unit Test<br>TDD]
+O[Logging]
+
+
+A-->N & O & E & D & F
+D-->I & J
+F-->G & H
+J-->K & L & M
+
+classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
+classDef js fill:#98CAF5,stroke:#98CAF5,stroke-width:2px;
+
+class D,E,F html
+class N,O js
+```
+
+## Unit test
+* configure unit test:
+    Right-Click ⟹ Command Palette... ⟹ Configure Tests ⟹ unittest ⟹ test ⟹ test_*.py
+    
