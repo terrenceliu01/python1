@@ -1,5 +1,6 @@
 import unittest
-from src.function.area import *
+
+from src.function.raiseError import *
 from math import pi
 
 class TestCircleArea(unittest.TestCase):
@@ -12,4 +13,12 @@ class TestCircleArea(unittest.TestCase):
         self.assertRaises(ValueError, circleArea, -2)
 
     def test_invalidType(self):
+        self.assertRaises(TypeError, circleArea, 3-5j)
+        self.assertRaises(TypeError, circleArea, "hello")
         self.assertRaises(TypeError, circleArea, None)
+        self.assertRaises(TypeError, circleArea, True)
+        self.assertRaises(TypeError, circleArea, False)
+        self.assertRaises(TypeError, circleArea, (1,2,3))
+
+
+

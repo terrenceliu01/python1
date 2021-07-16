@@ -12,6 +12,7 @@
 - [Loop](#loop)
 - [function](#function)
 - [Unit test](#unit-test)
+- [Logging](#logging)
 
 
 ## My First python program
@@ -180,9 +181,12 @@ graph TB
 B([Python Program])
 C[Python function]
 D[Python class]
+E[data]
+F[function]
 
 B --> C
 B --> D
+D -->E & F
 
 classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
 classDef js fill:yellow,stroke:#DE9E1F,stroke-width:2px;
@@ -214,13 +218,23 @@ $$
 * [Function in function](../src/function/functionInFunction.py)
 * [Return function from function](../src/function/returnFunction.py)
 * [pass function as argument](../src/function/passFunction2function.py)
+  
+
 ❓What is OOP? What are differences between Functional Programming and OOP
 ✔️4 Features of OOP
   1. Abstraction:class is a abstraction of object in real world to python program object type.（实体模拟）
   2. Inheritance: a class can inherit from multiple other class to increase code reusability.（共性继承）
   3. Polymorphism:same function behavior differently by different object type.（异类同功）
   4. Encapsulation：avoid data or function being called outside the class unintentionally（自我保护)
+
 * [raiseError.py](../src/function/raiseError.py)
+* [assertCheck.py](../src/function/assertCheck.py)
+
+the differenct between raise and assert:
+1. assert: I swear this must bt true, help developer
+2. raise: try to catch run-time error. sometime developer will use raise to control execution flow.
+
+[a sample of using try-except to control flow](../src/function/checkFloat.py)
 
 ```mermaid
 graph TB
@@ -265,7 +279,7 @@ N[Unit Test<br>TDD]
 O[Logging]
 
 
-A-->N & O & E & D & F
+A --> D & E & F & N & O  
 D-->I & J
 F-->G & H
 J-->K & L & M
@@ -281,3 +295,6 @@ class N,O js
 * configure unit test:
     Right-Click ⟹ Command Palette... ⟹ Configure Tests ⟹ unittest ⟹ test ⟹ test_*.py
     
+## Logging
+* write execution record to file. (database) used to do application analysis.
+* category to different level: Debug, Info, Warning, Error, Fatal
