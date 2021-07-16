@@ -262,9 +262,8 @@ class N,O js
 * configure unit test:
     Right-Click ⟹ Command Palette... ⟹ Configure Tests ⟹ unittest ⟹ test ⟹ test_*.py
     
-<<<<<<< HEAD
 ## Logging
 * write execution record to file. (database) used to do application analysis.
 * category to different level: Debug, Info, Warning, Error, Fatal
-=======
->>>>>>> 4bfcb917daf0a1bd9106dddee130b1003c1f8ae9
+
+[logging](../src/log/logging1.py)
