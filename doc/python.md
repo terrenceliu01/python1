@@ -66,12 +66,10 @@ otherwise, your python builtins functions no longer works the way you expected.
 * [Set](../src/languageBasics/set.py)
     - iterable
     - mutable
-    - &, |, ... operator
     - built in functions(add, )
 
 * [Dict](../src/languageBasics/dictionary.py)
     - iterable: only iterate key
-    - built in functions (items, keys,pop)
 
 
 ## Operator 
@@ -85,26 +83,6 @@ otherwise, your python builtins functions no longer works the way you expected.
 * [others](../src/languageBasics/operator/others.py)
 * [ternary](../src/languageBasics/operator/ternary.py)
 * [bitwise](../src/languageBasics/operator/bitwise.py)
-* 
-* Arithmatic Operator: +; -; *; /: %; **;//(floor divisor)
-    [arithmatic.py](../src/arithmatic.py)
-* Assignment Operators: =; +=; -=; *=; /=; %=; **=; //=
-    [assignment.py](../src/assignment.py)
-* Comparison Operators: ==, !=, <, >, <=, >=
-    [comparison.py](../src/comparison.py)
-* Logical Operator: and, or, not
-    [logical.py](../src/logical.py)
-* Membership Operator: in, not in
-    [membership.py](../src/membership.py)
-* Identity Operator: is, is not
-    [identity.py](../src/identity.py)
-* Ternary operator: if-else, and-or
-    [ternary.py](../src/ternary.py)
-* Multiple times operator: **
-    [others.py](../src/others.py)
-* Bitwise Operator: &, |, ^, <<, >>
-    [bitwise.py](../src/bitwise.py)
-
 
 ## Execution Control
 * **if-elif-else** statement Syntax
@@ -134,10 +112,10 @@ B--False-->D-->E
 A1((start))
 B1{if <condition>:}
 B2{elif <condition>:}
-C1[if code block<br>line-4,5]
-D1[elif code block<br>line-7]
+C1[if code block]
+D1[elif code block]
 E1[end]
-F1[else code block<br>line-9]
+F1[else code block]
 
 A1-->B1
 B1--True-->C1-->E1
@@ -153,29 +131,11 @@ class A,A1 start
 class B,B1,B2 html
 class E,E1 end1
 ```
-* [if-else2.py](../src/../content/if-else/if-else1.py)
-
+* [if-else1.py](../src/../content/if-else/if-else1.py)
 ## Loop
-* For loop
-  ![](images/Loop.svg)
-
-* [for/while loop](../src/languageBasics/loop/for2.py)
-
-* While loop
-    ![](images/while.svg)
-
-[while loop](../src/languageBasics/loop/while.py)
-* Python does NOT support do-while loop, but you can simulate do-while.
-    ![](images/DoWhile.svg)
-```
-while loop has 3 part:
-1. initialize variable, a=0
-2. variable condition, a<10
-3. adjust variable, a +=1
-```
-
-[simple for loop](../src/languageBasics/loop/for1.py)
-
+* [simple for loop](../src/languageBasics/loop/for1.py)
+* [simple while loop](../src/languageBasics/loop/while.py)
+  - a while loop 
 ```mermaid
 graph TB
 B([Python Program])
@@ -209,6 +169,13 @@ class END end1
     - 💡single response
     - call a function by function name and (), and arguments if there is any
 
+-  Other function uses
+    - can have functions in functions 
+      - [Function In Function](../src/function/functionInFunction.py)
+    - passing function to function means that we can create many different functions first with the same amount of values taken in, then use their property to calculate specific values for the target function 
+      - [pass function as argument](../src/function/passFunction2function.py)
+    - return function can be used to return a function such as the quadratic function, and can be used to calculate specific values when plugged into these equations 
+      - [return Function from function](../src/function/returnFunction.py)
 $$
 \underbrace {def}_{keyword} \underbrace {circle \_area}_{function \space name} \left(\underbrace {a, b,c ...}_{positional\; args} * \underbrace {e=None, f=200}_{keyword\;args}\right) \underbrace {:}_{eol}
 $$
@@ -295,6 +262,9 @@ class N,O js
 * configure unit test:
     Right-Click ⟹ Command Palette... ⟹ Configure Tests ⟹ unittest ⟹ test ⟹ test_*.py
     
+<<<<<<< HEAD
 ## Logging
 * write execution record to file. (database) used to do application analysis.
 * category to different level: Debug, Info, Warning, Error, Fatal
+=======
+>>>>>>> 4bfcb917daf0a1bd9106dddee130b1003c1f8ae9
