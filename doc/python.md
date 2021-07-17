@@ -422,6 +422,10 @@ DEALLOCATE db_cursor
 * one-to-many & Many-to-one
 * Many-to-Many
 * Self Referencing Relationship: This is used when a table needs to define a relationship with itself.
+  
+![](images/many-to-many.png)
+
+![](images/Intersection-Entity.png)
 
 ❓What is a View?
 ✔️A view in SQL is a virtual table based on the result-set of an SQL statement. A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
