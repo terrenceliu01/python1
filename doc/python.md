@@ -280,25 +280,33 @@ class N,O js
 
 ## SQLite
 ❓What is DBA?
+
 ✔️A Database Administrator (**DBA**) is individual or person responsible for controlling, maintenance, coordinating, and operation of database management system. ... Their role also varies from configuration, database design, migration, security, troubleshooting, backup, and data recovery.
 
 [SQL Interview Website](https://www.interviewbit.com/sql-interview-questions/)
+
 ❓What is Database?
+
 >✔️A database is an organized collection of data, stored and retrieved digitally from a remote or local computer system. Databases can be vast and complex, and such databases are developed using fixed design and modeling approaches.
 
 ❓What is DBMS?
+
 >✔️DBMS stands for Database Management System. DBMS is a system software responsible for the creation, retrieval, updation and management of the database. It ensures that our data is consistent, organized and is easily accessible by serving as an interface between the database and its end users or application softwares.
 
 ❓What is RDBMS? How is it different from DBMS?
+
 >✔️RDBMS stands for Relational Database Management System. The key difference here, compared to DBMS, is that RDBMS stores data in the form of a collection of tables and relations can be defined between the common fields of these tables. Most modern database management systems like MySQL, Microsoft SQL Server, Oracle, IBM DB2 and Amazon Redshift are based on RDBMS.
 
 ❓What is SQL?
+
 >✔️SQL stands for Structured Query Language. It is the standard language for relational database management systems. It is especially useful in handling organized data comprised of entities (variables) and relations between different entities of the data.
 
 ❓What are Tables and Fields?
+
 >✔️A table is an organized collection of data stored in the form of rows and columns. Columns can be categorized as vertical and rows as horizontal. The columns in a table are called fields while the rows can be referred to as records.
 
 ❓What are Constraints in SQL?
+
 >✔️Constraints are used to specify the rules concerning data in the table. It can be applied for single or multiple fields in an SQL table during creation of table or after creationg using the ALTER TABLE command. The constraints are:
 
 Constraints| Description
@@ -312,12 +320,15 @@ PRIMARY KEY|Uniquely identifies each record in a table.
 FOREIGN KEY|Ensures referential integrity for a record in another table.
 
 ❓What is Primary Key?
+
 >✔️The PRIMARY KEY constraint uniquely identifies each row in a table. It must contain UNIQUE values and has an implicit NOT NULL constraint.
+
 A table in SQL is strictly restricted to have one and only one primary key, which is comprised of single or multiple fields (columns).
 
 * [Create, PRIMARY KEY](../src/sqlite/sqlite0.py)
 
 ❓What is UNIQUE constraint?
+
 ✔️A UNIQUE constraint ensures that all values in a column are different. This provides uniqueness for the column(s) and helps identify each row uniquely. Unlike primary key, there can be multiple unique constraints defined per table. The code syntax for UNIQUE is quite similar to that of PRIMARY KEY and can be used interchangeably.
 
 ```SQL
@@ -343,6 +354,7 @@ UNIQUE (ID, FirstName);
 ```
 
 ❓What is a Foreign Key?
+
 ✔️A FOREIGN KEY comprises of single or collection of fields in a table that essentially refer to the PRIMARY KEY in another table. Foreign key constraint ensures referential integrity in the relation between two tables.
 The table with the foreign key constraint is labelled as the child table, and the table containing the candidate key is labelled as the referenced or parent table.
 
@@ -369,6 +381,7 @@ CREATE TABLE Invoice (
 ![](images/foreignKey.svg)
 
 ❓What is an Index? Explain its different types
+
 ✔️A database index is a data structure that provides quick lookup of data in a column or columns of a table. It enhances the speed of operations accessing data from a database table at the cost of additional writes and memory to maintain the index data structure.
 
 * Unique and Non-Unique Index:
@@ -378,22 +391,26 @@ CREATE TABLE Invoice (
 >Clustered indexes are indexes whose order of the rows in the database correspond to the order of the rows in the index. This is why only one clustered index can exist in a given table, whereas, multiple non-clustered indexes can exist in the table.
 
 ❓What is the difference between Clustered and Non-clustered index?
+
 >✔️ the differences can be broken down into three small factors 
 1. Clustered index modifies the way records are stored in a database based on the indexed column. Non-clustered index creates a separate entity within the table which references the original table.
 2. Clustered index is used for easy and speedy retrieval of data from the database, whereas, fetching records from the non-clustered index is relatively slower.
 3. In SQL, a table can have a single clustered index whereas it can have multiple non-clustered indexes.
 
 ❓What is a Query?
+
 ✔️A query is a request for data or information from a database table or combination of tables. 
 1. select query or 
 2. an action query.
 
 ❓What is a Subquery? What are its types?
+
 ✔️A subquery is a query within another query, also known as nested query or inner query .
 1. A **correlated subquery** cannot be considered as an independent query, but it can refer the column in a table listed in the FROM of the main query.
 2. A non-correlated subquery can be considered as an independent query and the output of subquery is substituted in the main query.
 
 ❓What are some common clauses used with SELECT query in SQL?
+
 ✔️Some common SQL clauses used in conjuction with a SELECT query are as follows:
 1. WHERE clause in SQL is used to filter records that are necessary, based on specific conditions.
 2. ORDER BY clause in SQL is used to sort the records based on some field(s) in ascending (ASC) or descending order (DESC).
@@ -401,6 +418,7 @@ CREATE TABLE Invoice (
 4. HAVING clause in SQL is used to filter records in combination with the GROUP BY clause. It is different from WHERE, since WHERE clause cannot filter aggregated records
 
 ❓What is Cursor? How to use a Cursor?
+
 ✔️A database cursor is a control structure that allows for traversal of records in a database.
 ```sql
 DECLARE @name VARCHAR(50) 	 /* Declare All Required Variables */
@@ -420,6 +438,7 @@ DEALLOCATE db_cursor
 ```
 
 ❓What are Entities and Relationships?
+
 ✔️**Entity:** An entity can be a real-world object, either tangible or intangible, that can be easily identifiable. For example, in a college database, students, professors, workers, departments, and projects can be referred to as entities. Each entity has some associated properties that provide it an identity.
 ✔️**Relationship:** Relations or links between entities that have something to do with each other. For example - The employees table in a company's database can be associated with the salary table in the same database.
 * one-to-many & Many-to-one
@@ -431,18 +450,22 @@ DEALLOCATE db_cursor
 ![](images/Intersection-Entity.png)
 
 ❓What is a View?
+
 ✔️A view in SQL is a virtual table based on the result-set of an SQL statement. A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
 
 ❓What is Normalization?
+
 ✔️Normalization represents the way of organizing structured data in the database efficiently. It includes creation of tables, establishing relationships between them, and defining rules for those relationships. Inconsistency and redundancy can be kept in check based on these rules, hence, adding flexibility to the database.
 
 ❓What is Denormalization?
+
 ✔️Denormalization is the inverse process of normalization, where the normalized schema is converted into a schema which has redundant information. The performance is improved by using redundancy and keeping the redundant data consistent. The reason for performing denormalization is the overheads produced in query processor by an over-normalized structure.
 
 ❓What are the TRUNCATE, DELETE and DROP statements?
 ✔️
 
 ❓What is PL/SQL Stored Procedure?
+
 ✔️A stored procedure is a set of Structured Query Language (SQL) statements with an assigned name, which are stored in a relational database management system (RDBMS) as a group, so it can be reused and shared by multiple programs.
 
 ```sql
@@ -458,6 +481,7 @@ END procedure_name;
 ```
 
 ❓What is function
+
 ✔️
 ```sql
 CREATE OR REPLACE
@@ -471,6 +495,7 @@ BEGIN
 END calculate_score;
 ```
 ❓What is Trigger?
+
 ✔️A trigger is a special type of stored procedure that automatically runs when an event occurs in the database server. 
 
 ```sql
