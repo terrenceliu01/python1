@@ -279,6 +279,9 @@ class N,O js
 [logging](../src/log/logging1.py)
 
 ## SQLite
+❓What is DBA?
+✔️A Database Administrator (**DBA**) is individual or person responsible for controlling, maintenance, coordinating, and operation of database management system. ... Their role also varies from configuration, database design, migration, security, troubleshooting, backup, and data recovery.
+
 [SQL Interview Website](https://www.interviewbit.com/sql-interview-questions/)
 ❓What is Database?
 >✔️A database is an organized collection of data, stored and retrieved digitally from a remote or local computer system. Databases can be vast and complex, and such databases are developed using fixed design and modeling approaches.
