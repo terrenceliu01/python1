@@ -23,6 +23,8 @@
   - [Union](#union)
   - [GROUP BY](#group-by)
   - [INSERT INTO SELECT](#insert-into-select)
+  - [class basic](#class-basic)
+  - [dunder function in class](#dunder-function-in-class)
 
 
 ## My First python program
@@ -151,11 +153,11 @@ graph TB
 B([Python Program])
 C[Python function]
 D[Python class]
-E[data]
+E[data == Attribute]
 F[function]
 
-B --> C
-B --> D
+B --write--> C
+B --write--> D
 D -->E & F
 
 classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
@@ -254,9 +256,10 @@ L[Angular]
 M[DJango]
 N[Unit Test<br>TDD]
 O[Logging]
+P[Document]
 
 
-A --> D & E & F & N & O  
+A --> D & E & F & N & O & P
 D-->I & J
 F-->G & H
 J-->K & L & M
@@ -368,7 +371,7 @@ CREATE TABLE Supplier (
 )
 
 CREATE TABLE Invoice (
-  InvoiceNumber  INTEGER NOT NULL,
+  InvoiceNumber  INTEGER NOT NULL, 
   Text           VARCHAR(4096),
   SupplierNumber INTEGER NOT NULL,
   CONSTRAINT invoice_pk PRIMARY KEY(InvoiceNumber),
@@ -387,12 +390,12 @@ CREATE TABLE Invoice (
 * Unique and Non-Unique Index:
 >Unique indexes are indexes that help maintain data integrity by ensuring that no two rows of data in a table have identical key values. Once a unique index has been defined for a table, uniqueness is enforced whenever keys are added or changed within the index.
 
-* Clustered and Non-Clustered Index:
+⚡️💡* Clustered and Non-Clustered Index:
 >Clustered indexes are indexes whose order of the rows in the database correspond to the order of the rows in the index. This is why only one clustered index can exist in a given table, whereas, multiple non-clustered indexes can exist in the table.
 
 ❓What is the difference between Clustered and Non-clustered index?
 
->✔️ the differences can be broken down into three small factors 
+>💡✔️ the differences can be broken down into three small factors 
 1. Clustered index modifies the way records are stored in a database based on the indexed column. Non-clustered index creates a separate entity within the table which references the original table.
 2. Clustered index is used for easy and speedy retrieval of data from the database, whereas, fetching records from the non-clustered index is relatively slower.
 3. In SQL, a table can have a single clustered index whereas it can have multiple non-clustered indexes.
@@ -439,6 +442,20 @@ DEALLOCATE db_cursor
 
 ❓What are Entities and Relationships?
 
+```mermaid
+classDiagram
+class Invoice{
+  ID NOT NULL PRIMARY KEY
+  CustomerID:INT
+}
+
+class Customer{
+
+}
+
+
+
+```
 ✔️**Entity:** An entity can be a real-world object, either tangible or intangible, that can be easily identifiable. For example, in a college database, students, professors, workers, departments, and projects can be referred to as entities. Each entity has some associated properties that provide it an identity.
 ✔️**Relationship:** Relations or links between entities that have something to do with each other. For example - The employees table in a company's database can be associated with the salary table in the same database.
 * one-to-many & Many-to-one
@@ -455,7 +472,9 @@ DEALLOCATE db_cursor
 
 ❓What is Normalization?
 
-✔️Normalization represents the way of organizing structured data in the database efficiently. It includes creation of tables, establishing relationships between them, and defining rules for those relationships. Inconsistency and redundancy can be kept in check based on these rules, hence, adding flexibility to the database.
+💡✔️Normalization represents the way of organizing structured data in the database efficiently. It includes creation of tables, establishing relationships between them, and defining rules for those relationships. Inconsistency and redundancy can be kept in check based on these rules, hence, adding flexibility to the database.
+
+举例说明：失败，成功
 
 ❓What is Denormalization?
 
@@ -464,7 +483,7 @@ DEALLOCATE db_cursor
 ❓What are the TRUNCATE, DELETE and DROP statements?
 ✔️
 
-❓What is PL/SQL Stored Procedure?
+❓What is PL/SQL Oracle Stored Procedure?
 
 ✔️A stored procedure is a set of Structured Query Language (SQL) statements with an assigned name, which are stored in a relational database management system (RDBMS) as a group, so it can be reused and shared by multiple programs.
 
@@ -479,6 +498,9 @@ BEGIN
   ....
 END procedure_name;
 ```
+
+AWS: Amazon Web Service
+Firebase:
 
 ❓What is function
 
@@ -519,7 +541,6 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
     assembly_name.class_name.method_name  
   
 ```
-
 
 ### CRUD (Create, Retreive, Update, Delete)
 * Create (Insert into)
@@ -721,4 +742,25 @@ FROM table1
 WHERE condition;
 ```
 
+❓What is class?
+>✔️Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by its class) for modifying its state, or do some special thing.
 
+```mermaid
+graph LR
+A([Data type])
+B[Python Builtins]
+C[User Defined]
+
+A--> B & C
+```
+### class basic
+* [Syntax to create simplest class](../src/class/class01.py)
+* [define a function outside of a class](../src/class/class02.py)
+* [Define a function inside the class](../src/class/class03.py)
+* [define initializer: __init__(self)](../src/class/class04.py)
+* [use inputName as keyword argument, make default __init__ work](../src/class/class05.py)
+* [protected and private data _, __](../src/class/class07.py)
+* [getter, setter, property](../src/class/class08.py)
+* 
+### dunder function in class
+* [__repr__, __str__,](../src/class/class06.py)

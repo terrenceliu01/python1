@@ -1,4 +1,4 @@
-from sqlite6 import create_connection
+from sqlite6 import *
 
 def main():
     database = "sqlitebook.db"

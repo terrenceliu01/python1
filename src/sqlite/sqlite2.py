@@ -1,8 +1,9 @@
-import sqlite3
-
 """
 Retrieve data from table
 """
+
+import sqlite3
+
 
 def create_connection(db_file):
     """ create a database connection to a SQLite database """
