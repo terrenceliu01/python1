@@ -25,6 +25,9 @@
   - [INSERT INTO SELECT](#insert-into-select)
   - [class basic](#class-basic)
   - [dunder function in class](#dunder-function-in-class)
+  - [class tricks](#class-tricks)
+  - [attribute scope](#attribute-scope)
+  - [class inheritance](#class-inheritance)
 
 
 ## My First python program
@@ -764,3 +767,27 @@ A--> B & C
 * 
 ### dunder function in class
 * [__repr__, __str__,](../src/class/class06.py)
+* [__new__, __init__](../src/class/class09.py)
+  - if override both __init__ and __new__, you need same arguments.
+  - don't override __new__, onless you have to.
+  - __new__ is constructor which return the instance of class
+  - __init__ is initializer which only initialize the instance reutn None.
+  - python always call __new__ first and then __init__.
+* [__iter__, __next__](../src/class/class15.py)
+    - [range1.py](../src/class/range1.py)
+  
+
+### class tricks
+* [override __new__ can return different class intance](../src/class/class10.py)
+* [avoid duplicated code block](../src/class/class13.py)
+* 
+### attribute scope
+* [class level attribute](../src/class/class11.py)
+* [instance level attribute](../src/class/class12.py)
+
+### class inheritance
+* [class inheritance](../src/class/class16.py)
+    - subclass inherits all features from superclass(constructor, repr, func, attributes)
+    - could override all features from superclass
+    - subclass can define its own function and attributes
+* [Enum](../src/class/class17.py)
