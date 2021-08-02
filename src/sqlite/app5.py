@@ -1,3 +1,6 @@
+"""
+build CRUD online services
+"""
 from flask import Flask, jsonify, request
 import json
 # from flask_cors import CORS

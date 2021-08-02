@@ -29,6 +29,8 @@
   - [class tricks](#class-tricks)
   - [attribute scope](#attribute-scope)
   - [class inheritance](#class-inheritance)
+- [File Access](#file-access)
+- [Plot](#plot)
 
 
 ## My First python program
@@ -745,6 +747,14 @@ SELECT column1, column2, column3, ...
 FROM table1
 WHERE condition;
 ```
+* [create table for one-to-many relation](../src/sqlite/sqlite6.py)
+* [insert one-to-many data](../src/sqlite/sqlite7.py)
+* [retrieve one-to-many data](../src/sqlite/sqlite8.py)
+* Homework: create sample code for many-to-many, such as customer-to-provider
+* [Create books sqlite database table](../src/sqlite/sqlite9.py)
+* [insert data for books](../src/sqlite/sqlite10.py)
+* [CRUD for books](../src/sqlite/sqlitebookdb.py)
+
 
 ## class
 ❓What is class?
@@ -793,4 +803,14 @@ A--> B & C
     - subclass inherits all features from superclass(constructor, repr, func, attributes)
     - could override all features from superclass
     - subclass can define its own function and attributes
-* [Enum](../src/class/class17.py)
+* [Enum, Enum is callable.](../src/class/class17.py)
+* [classmethod vs. instance method](../src/class/class18.py)
+
+## File Access
+
+## Plot
+
+ReactX
+Functional programing
+Monad
+Machine Learning
