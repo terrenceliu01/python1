@@ -20,7 +20,7 @@ if __name__ == '__main__':
     print(type(x) is Color)
     print(isinstance(x, Color))
 
-    # Enum is callable __call__()
+    
     Animal = Enum('Animal',{'Ant':4, 'Bee':2, 'Dog':11}) # use dict
     x = Animal.Bee
     print(x.name)

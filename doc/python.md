@@ -29,8 +29,18 @@
   - [class tricks](#class-tricks)
   - [attribute scope](#attribute-scope)
   - [class inheritance](#class-inheritance)
+- [Documentation](#documentation)
+  - [Document for developer](#document-for-developer)
+- [Integration Test](#integration-test)
+  - [Document for user](#document-for-user)
+- [Deployment](#deployment)
 - [File Access](#file-access)
 - [Plot](#plot)
+- [Lambda Expression](#lambda-expression)
+- [map function](#map-function)
+- [filter function](#filter-function)
+- [reduce() function](#reduce-function)
+- [Functional programing](#functional-programing)
 
 
 ## My First python program
@@ -260,12 +270,14 @@ J[Web Based]
 K[ReactJS]
 L[Angular]
 M[DJango]
-N[Unit Test<br>TDD]
-O[Logging]
-P[Document]
+UNIT(Unit Test<br>TDD)
+LOG(Logging)
+DOC(Documentation)
+INTG(Integration Test)
+DEPLOY(Deployment)
 
 
-A --> D & E & F & N & O & P
+A --> D & E & F & UNIT & LOG & DOC & INTG & DEPLOY
 D-->I & J
 F-->G & H
 J-->K & L & M
@@ -274,7 +286,7 @@ classDef html fill:#F46624,stroke:#F46624,stroke-width:4px,color:white;
 classDef js fill:#98CAF5,stroke:#98CAF5,stroke-width:2px;
 
 class D,E,F html
-class N,O js
+class UNIT,LOG js
 ```
 
 ## Unit test
@@ -788,12 +800,16 @@ A--> B & C
   - python always call __new__ first and then __init__.
 * [__iter__, __next__](../src/class/class15.py)
     - [range1.py](../src/class/range1.py)
+* [__call__, make object callable](../src/class/class22.py)
+* [__gt__, __lt__,__eq__,__add__](../src/class/class24.py)
   
 
 ### class tricks
 * [override __new__ can return different class intance](../src/class/class10.py)
 * [avoid duplicated code block](../src/class/class13.py)
-* 
+* [__call__, make object callable](../src/class/class22.py)
+* [@classmethod vs. @staticmethod](../src/class/class23.py)
+
 ### attribute scope
 * [class level attribute](../src/class/class11.py)
 * [instance level attribute](../src/class/class12.py)
@@ -806,11 +822,103 @@ A--> B & C
 * [Enum, Enum is callable.](../src/class/class17.py)
 * [classmethod vs. instance method](../src/class/class18.py)
 
+* composition vs. Inheritance
+```mermaid
+classDiagram
+
+class Employee{
+  name:string
+  employeeId:int
+}
+
+class Manager{
+  employee:Employee
+  assignWork()
+}
+
+Employee<|--Manager:inheritance is
+```
+```py
+assign Manager.employee = None
+```
+
+## Documentation
+### Document for developer
+❓Why do I need document my code?
+✔️
+
+## Integration Test
+❓
+✔️
+
+### Document for user
+
+## Deployment
+
 ## File Access
+* [write string to file, ./, ../](../src/files/file01.py)
+* [read and append to file](../src/files/file02.py)
+* [with open, automatically close file](../src/files/file03.py)
+* [build student list from json file](../src/files/file04.py)
+* [dump json to file](../src/files/file05.py)
+* [load json string do dict](../src/files/file06.py)
+* [read csv](../src/files/file07.py)
+* [plot csv](../src/files/file08.py)
+* [write csv from dict](../src/files/file09.py)
+
 
 ## Plot
 
-ReactX
-Functional programing
+## Lambda Expression
+❓ What is lambda expression
+✔️A Lambda function in Python programming is a anonymous function, or a function having no name.
+
+* Syntax:
+```py
+lambda <variable list separated by comma>: expression
+```
+
+1. short intline function
+2. one time used
+3. can assign a function name
+
+## map function
+❓What is map() function?
+✔️the map() function is processing iterable without looping.
+
+![](images/map.png)
+
+1. two iterable not necessary to be the same length, the smaller will be used
+2. apply function to each element in the iterable
+3. the varaible order is same as iterable order
+4. out iterable has the same size of the smaller iterable
+
+## filter function
+❓What is filter function?
+✔️filter function return an iterable yielding those items of iterable for which function(item) is true. If function is None, return the item that are true.
+
+1. return iterable with size <= original iterable
+2. function is a boolean function return True or False
+
+* Syntax:
+```py
+filter(function or None, iterable) --> filter object
+```
+
+## reduce() function
+❓What is reduce() function?
+✔️ The reduce(func, seq) function is used to apply a particular function passed in its arguments to all of the list elements.
+
+
+
+## Functional programing
+❓ What is functional programming?
+✔️
+
 Monad
+ReactiveX
 Machine Learning
+Docker
+Kubernate
+AWS
+DevOps
