@@ -40,7 +40,12 @@
 - [map function](#map-function)
 - [filter function](#filter-function)
 - [reduce() function](#reduce-function)
+- [Clean Code](#clean-code)
+  - [Design Principles SOLID](#design-principles-solid)
 - [Functional programing](#functional-programing)
+  - [calculate square root](#calculate-square-root)
+  - [Functor](#functor)
+  - [Monad](#monad)
 
 
 ## My First python program
@@ -893,6 +898,11 @@ lambda <variable list separated by comma>: expression
 3. the varaible order is same as iterable order
 4. out iterable has the same size of the smaller iterable
 
+* [r = map(function, sequence)](../src/functional/map01.py)
+* [convert temperature for-loop vs map](../src/functional/map02.py)
+* [temperature converter with lambda expression](../src/functional/map03.py)
+
+
 ## filter function
 ❓What is filter function?
 ✔️filter function return an iterable yielding those items of iterable for which function(item) is true. If function is None, return the item that are true.
@@ -904,19 +914,97 @@ lambda <variable list separated by comma>: expression
 ```py
 filter(function or None, iterable) --> filter object
 ```
+* [filter(function, squence)](../src/functional/filter01.py)
+* [filt by temperature](../src/functional/filter02.py)
+* [for vs filter](../src/functional/filter03.py)
+
 
 ## reduce() function
 ❓What is reduce() function?
 ✔️ The reduce(func, seq) function is used to apply a particular function passed in its arguments to all of the list elements.
 
+* [a list of items reduce to one item](../src/functional/reduce01.py)
 
+## Clean Code
+[How to write good code](../../doc/Clean-Code.pdf)
+
+### Design Principles SOLID
+
+[SOLIDS website](https://stackify.com/solid-design-principles/)
+
+1. Single Responsibility principle
+  >A class should have one, and only one, reason to change. You need to change your class as soon as one of its responsibilities changes. it makes your software easier to implement and prevents unexpected side-effects of future changes.
+2. Open/Close Pricinple
+  >Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+3. Liskov Substitution Principle
+   >Let Φ(x) be a property provable about objects x of type T. Then Φ(y) should be true for objects y of type S where S is a subtype of T.
+4. Interface Segregation Principle
+  >Clients should not be forced to depend upon interfaces that they do not use.
+5. Dependency Inversion
+  >High-level modules, which provide complex logic, should be easily reusable and unaffected by changes in low-level modules, which provide utility features. 
+  
+应变（requirements change over time. least code change on requirement changes.）
 
 ## Functional programing
 ❓ What is functional programming?
-✔️
+✔️ functional programming is a programming paradigm where programs are constructed by applying and composing functions. 
+* [pass and return function](../src/functional/myTimer1.py)
+* [function decorator](../src/functional/myTimer2.py)
+### calculate square root
+$$ a_{i+1} = \frac {(a_i + \frac n {a_i})} 2 $$
+$$ a_1 = f(a_0) $$
+$$ a_2 = f(f(a_0)) $$
 
-Monad
+### Functor
+❓ What is a functor?
+✔️
+![Functor, applicative, monad](images/monad.png)
+
+* [normal function call vs. fuction operator](../src/functional/functor.py)
+❓ Why use wrapper box on number?
+✔️ to solve very common program issue
+1. Null pointer exception
+2. function call failure
+   
+```mermaid
+graph TB
+
+A(Input/output <br>value)
+B[Good value<br>Just]
+C[Bad value<br>Nothing]
+
+A-->B & C
+
+D(function)
+E[Successful<br>Right]
+F[Failed<br>Left]
+
+D-->E & F
+
+classDef start fill:green,stroke:#DE9E1F,stroke-width:2px,color:white;
+classDef end1 fill:red,stroke:#DE9E1F,stroke-width:2px,color:white;
+
+class B,E start
+class C,F end1
+```
+
+```mermaid
+classDiagram
+
+class Box{
+  value:any_object
+}
+class Functor{
+  fmap(function)
+}
+
+Box<|--Functor
+```
+
+### Monad
 ReactiveX
+![](images/ReactiveAction.gif)
+
 Machine Learning
 Docker
 Kubernate
