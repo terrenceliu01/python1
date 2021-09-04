@@ -29,6 +29,8 @@
   - [class tricks](#class-tricks)
   - [attribute scope](#attribute-scope)
   - [class inheritance](#class-inheritance)
+- [Blackjack Card Game](#blackjack-card-game)
+- [Yahtzee Dice Game](#yahtzee-dice-game)
 - [Documentation](#documentation)
   - [Document for developer](#document-for-developer)
 - [Integration Test](#integration-test)
@@ -45,6 +47,7 @@
 - [Functional programing](#functional-programing)
   - [calculate square root](#calculate-square-root)
   - [Functor](#functor)
+  - [Applicative](#applicative)
   - [Monad](#monad)
 
 
@@ -847,6 +850,15 @@ Employee<|--Manager:inheritance is
 assign Manager.employee = None
 ```
 
+## Blackjack Card Game
+* [design document](blackjack.md)
+* [if without else, dynamic winner() function](../src/blackjack.py)
+* [Unit test for blackjack](../test/test_blackjack.py)
+
+## Yahtzee Dice Game
+[Yahtzee Dice Game](https://www.dicegamedepot.com/yahtzee-rules/)
+
+
 ## Documentation
 ### Document for developer
 ❓Why do I need document my code?
@@ -957,7 +969,8 @@ $$ a_2 = f(f(a_0)) $$
 
 ### Functor
 ❓ What is a functor?
-✔️
+✔️Functor is a 'wrappered box value' can be applied by a function. a container class implements fmap() function.
+
 ![Functor, applicative, monad](images/monad.png)
 
 * [normal function call vs. fuction operator](../src/functional/functor.py)
@@ -965,7 +978,9 @@ $$ a_2 = f(f(a_0)) $$
 ✔️ to solve very common program issue
 1. Null pointer exception
 2. function call failure
-   
+
+* [Sample for null pointer and function call failure](../src/functional/whyWrapperBox.py) 
+
 ```mermaid
 graph TB
 
@@ -1000,8 +1015,49 @@ class Functor{
 
 Box<|--Functor
 ```
+ * [Understand functor, applicative and monad](../src/functional/box.py)
+ * [Understand @curry function decorator](../src/functional/monad1.py)
+  1. tell how many arguments
+  2. open box before run the function
+  3. box the result for future call
+  4. handle Nothing before function call
+
+
+### Applicative
+❓ What is applicative?
+✔️ you apply a wrapperd function to a warapped value using apply. if the Wrapper class implement amap() function, then the wrapper class is a applicative.
+✔️apply function to wrapper boxed values one after another, all the values are applicatives.
 
 ### Monad
+```mermaid
+classDiagram
+
+class Box{
+  value:any
+}
+class Functor{
+  fmap(function)
+  map(function)
+}
+class Applicative{
+  amap(functorValue)
+}
+class Monad{
+  bind(function)
+  __rshift__(function)
+}
+class Just{
+  value:any
+}
+
+Box<|--Functor
+Functor<|--Just
+Functor<|--Applicative
+Applicative<|--Just
+Monad<|--Just
+
+```
+
 ReactiveX
 ![](images/ReactiveAction.gif)
 

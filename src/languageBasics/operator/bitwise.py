@@ -12,3 +12,7 @@ c = a | b     # OR
 print("41:",bin(c))
 c = a ^ b     # XOR
 print("43:",bin(c))
+
+# right-shift operator
+c = a>>1 # divided by 2
+print(c)

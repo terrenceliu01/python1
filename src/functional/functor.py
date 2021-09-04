@@ -11,3 +11,6 @@ print(x)
 
 x = add3 * Just(2) # Just is a functor
 print(x)
+
+x = Just(2).map(add3)
+print(x)
